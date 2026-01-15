@@ -29,6 +29,7 @@ resizer [OPTIONS] <input> <output>
 - `--min-quality <MIN_QUALITY>`: Min quality (1..=100) [default: 30]
 - `--max-quality <MAX_QUALITY>`: Max quality (1..=100) [default: 95]
 - `--max-downscale-rounds <MAX_DOWNSCALE_ROUNDS>`: How many downscale rounds to attempt [default: 10]
+- `--png-compression-level <PNG_COMPRESSION_LEVEL>`: PNG compression level (0-9, higher = slower but smaller) [default: 6]
 - `--help`: Print help
 
 ### Examples
@@ -42,16 +43,16 @@ resizer input.jpg output.webp --target-kb 100
 Compress with max dimensions and PNG format:
 
 ```bash
-resizer input.png output.png --target-kb 50 --format png --max-width 800 --max-height 600
+resizer input.png output.png --target-kb 50 --format png --max-width 800 --max-height 600 --png-compression-level 9
 ```
 
 ### Behavior
 
-- Uses binary search on quality to find the highest quality that fits the target size.
-- If min quality still exceeds the target, downscales the image by 10% and retries.
-- JPEG and WebP convert to RGB (transparent pixels become black).
-- PNG preserves alpha channels if present.
-- For PNG, quality controls compression level (higher = smaller but slower).
+- For JPEG and WebP: Uses binary search on quality to find the highest quality that fits the target size. If min quality still exceeds the target, downscales the image by 10% and retries. Pre-downscaling is applied for very large images.
+- For PNG: No quality search; encodes at the specified compression level. If too large, downscales by 10% and retries.
+- JPEG converts to RGB (transparent pixels become black).
+- WebP preserves alpha if present.
+- PNG preserves alpha if present.
 
 ## License
 
