@@ -1,4 +1,4 @@
-# Resizer
+# Sizify
 
 ![Crates.io Version](https://img.shields.io/crates/v/sizify?style=flat&link=https%3A%2F%2Fcrates.io%2Fcrates%2Fsizify)
 
@@ -11,16 +11,16 @@ Clone the repository and build with Cargo:
 
 ```bash
 git clone <repository-url>
-cd resizer
+cd sizify
 cargo build --release
 ```
 
-The binary will be available at `target/release/resizer`.
+The binary will be available at `target/release/sizify`.
 
 ## Usage
 
 ```bash
-resizer [OPTIONS] <input> <output>
+sizify [OPTIONS] <input> <output>
 ```
 
 ### Options
@@ -40,13 +40,13 @@ resizer [OPTIONS] <input> <output>
 Compress an image to under 100 KB as WebP:
 
 ```bash
-resizer input.jpg output.webp --target-kb 100
+sizify input.jpg output.webp --target-kb 100
 ```
 
 Compress with max dimensions and PNG format:
 
 ```bash
-resizer input.png output.png --target-kb 50 --format png --max-width 800 --max-height 600 --png-compression-level 9
+sizify input.png output.png --target-kb 50 --format png --max-width 800 --max-height 600 --png-compression-level 9
 ```
 
 ### Behavior
