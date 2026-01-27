@@ -1,11 +1,11 @@
 [package]
 name = "sizify"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2024"
 description = "A CLI tool to compress images to fit under a target size in KB by adjusting quality and downscaling if needed"
 license = "MIT"
-repository = "https://github.com/junkpiano/resizer"
-homepage = "https://github.com/junkpiano/resizer"
+repository = "https://github.com/junkpiano/sizify"
+homepage = "https://github.com/junkpiano/sizify"
 
 [dependencies]
 anyhow = "1"
