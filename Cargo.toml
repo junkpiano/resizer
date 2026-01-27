@@ -1,5 +1,5 @@
 [package]
-name = "resizer"
+name = "sizify"
 version = "1.0.0"
 edition = "2024"
 description = "A CLI tool to compress images to fit under a target size in KB by adjusting quality and downscaling if needed"
