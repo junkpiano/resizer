@@ -7,15 +7,9 @@ A CLI tool to compress images to fit under a target size in KB by adjusting qual
 
 ## Installation
 
-Clone the repository and build with Cargo:
-
 ```bash
-git clone <repository-url>
-cd sizify
-cargo build --release
+cargo install sizify
 ```
-
-The binary will be available at `target/release/sizify`.
 
 ## Usage
 
