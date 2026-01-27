@@ -1,5 +1,8 @@
 # Resizer
 
+![Crates.io Version](https://img.shields.io/crates/v/sizify?style=flat&link=https%3A%2F%2Fcrates.io%2Fcrates%2Fsizify)
+
+
 A CLI tool to compress images to fit under a target size in KB by adjusting quality and downscaling if needed.
 
 ## Installation
